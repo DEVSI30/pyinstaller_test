@@ -1,12 +1,10 @@
-from datetime import datetime
-import os, sys
+from .file_path_util import get_absolute_project_path, get_now_str
+import os
 
 
 def make_txt_file():
-    now = datetime.now()
-
-    file_name = f"{now.year}_{now.month}_{now.day}_{now.hour}_{now.minute}_{now.second}"
-    file_path = "\\".join(sys.argv[0].split("\\")[:-2]) + "\\output\\"
+    file_name = get_now_str()
+    file_path = get_absolute_project_path() + "output\\"
     file_ext = "txt"
 
     if os.path.exists(file_path):
@@ -14,3 +12,4 @@ def make_txt_file():
             f.write("Hello")
 
         f.close()
+
