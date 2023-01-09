@@ -6,6 +6,6 @@ from file_generator import excel_file_generator
 if __name__ == '__main__':
     # simple_file_generator.make_txt_file()
     TEST = False
-    print(f"[output$file_path]:{excel_file_generator.export_excel_with_plt(TEST)}")
+    print(f"[output$file_path]:{excel_file_generator.excel_img(TEST)}")
 
     os.system("pause")

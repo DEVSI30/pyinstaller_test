@@ -3,7 +3,6 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import io
 
-
 def create_excel_file(test_option):
     file_name = get_now_str()
     file_path = "./output/" if test_option else get_absolute_project_path() + "output\\"
@@ -27,7 +26,7 @@ def create_excel_file(test_option):
     # write_wb.save(f"{file_path}{file_name}.{file_ext}")
 
 
-def export_excel_with_plt(test_option):
+def excel_img(test_option):
     file_name = get_now_str()
     file_path = "./output/" if test_option else get_absolute_project_path() + "output\\"
     file_ext = "xlsx"
